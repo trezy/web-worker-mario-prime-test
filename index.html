@@ -1,0 +1,47 @@
+<!doctype html>
+
+<head>
+  <title>Using Web Workers for Number Crunching</title>
+
+  <link href="assets/app.css" rel="stylesheet">
+  <link href="assets/game.css" rel="stylesheet">
+
+  <script async src="assets/app.js"></script>
+  <script async src="assets/game.js"></script>
+</head>
+
+<body>
+  <form>
+    <h1>Super Mario Brothers</h1>
+
+    <h2>Prime Numbers Edition!</h2>
+
+    <fieldset>
+      <legend>
+        Prime Upper Boundary:
+      </legend>
+
+      <input
+        min="2"
+        name="prime-upper-boundary"
+        type="number"
+        value="1000">
+    </fieldset>
+
+    <menu type="toolbar">
+      <button
+        data-worker="true"
+        value="blep"
+        type="submit">
+        Start with Web Worker!
+      </button>
+
+      <button
+        type="submit">
+        Start without Web Worker
+      </button>
+    </menu>
+  </form>
+
+  <div class="character left mario"></div>
+</body>

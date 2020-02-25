@@ -1,0 +1,30 @@
+@keyframes character-animation {
+  100% {
+    background-position: -320px 0;
+  }
+}
+
+.character {
+  background-position: 0 0;
+  bottom: 2rem;
+  height: 160px;
+  image-rendering: pixelated;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 80px;
+}
+
+.left {
+  transform: translateX(-50%) rotateY(180deg);
+}
+
+.mario {
+  background-image: url('/assets/images/mario.png');
+}
+
+.walking {
+  animation-duration: 0.5s;
+  animation-name: character-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(4, end);
+}
