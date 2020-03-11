@@ -50,8 +50,10 @@ const handleMessage = ({ data }) => {
 }
 
 // Listen for messages from the worker
-primeCalculatorForm.addEventListener('submit', event => {
-  const useWorker = Boolean(event.explicitOriginalTarget.getAttribute('data-worker'))
+primeCalculatorForm.querySelectorAll('menu button').forEach(button => {
+  button.addEventListener('click', event => {
+    console.log(event.target)
+    const useWorker = Boolean(event.target.getAttribute('data-worker'))
 
   event.preventDefault()
 
@@ -67,4 +69,5 @@ primeCalculatorForm.addEventListener('submit', event => {
     calculatePrimes(primeUpperBoundary.value)
     enableForm()
   }
+})
 })
